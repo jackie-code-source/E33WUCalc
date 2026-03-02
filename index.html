@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/stuff.css">
+    <script src="js/scripts.js" defer></script>
+    <title>Expedition 33 - Weapon Upgrade Calculator</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Expedition 33 - Weapon Upgrade Calculator</h1>
+            <div class="muted">Cool Lorem Ipsum</div>
+        </header>
+
+        <section class="card">
+            <div class="grid">
+                <div><label for="current">Current level</label><input id="current" type="number" min="1" max="33"
+                        value="1">
+                </div>
+                <div><label for="target">Target level</label><input id="target" type="number" min="1" max="33"
+                        value="12"></div>
+            </div>
+            <div class="actions">
+                <button id="calc" class="btn primary">Calculate</button>
+                <button id="resetLevels" class="btn">Reset</button>
+                <span id="msg" class="muted" role="status" aria-live="polite"></span>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="results">
+                <div class="pill"><strong>Upgrades needed:</strong> <span id="steps">-</span></div>
+                <div class="pill"><strong>Total Materials:</strong> <span id="totalMats">-</span></div>
+            </div>
+            <div style="margin-top:16px;overflow:auto">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>From -> To</th>
+                            <th>Catalysts</th>
+                            <th>Polished</th>
+                            <th>Resplendent</th>
+                            <th>Grandiose</th>
+                            <th>Perfect</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+  :root {
+    --bg: #0f1115;
+    --card: #161923;
+    --muted: #aab2c8;
+    --text: #e7ecf6;
+    --accent: #7aa2ff;
+    --bad: #ff6b6b;
+    --good: #1ec28b;
+    --border: #2a2f3c;
+    --input: #1a1f2c;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, Segoe UI, Inter, Roboto, Arial;
+    color: var(--text);
+    background: var(--bg);
+  }
+
+  .wrap {
+    max-width: 980px;
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  h1 {
+    margin: 0 0 8px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  @media (min-width: 760px) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    background: var(--input);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  .btn {
+    display: inline-flex;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #1b2340;
+    color: var(--text);
+    cursor: pointer;
+  }
+
+  .btn.primary {
+    background: #204ae0;
+    border-color: #2144c6;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .muted {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .pill {
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--input);
+  }
+
+  .results {
+    display: inline-flex;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  @media (min-width: 760px) {
+    .results {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+  }
+
+  .ok {
+    color: var(--good);
+  }
+
+  .err {
+    color: var(--bad);
+  }
